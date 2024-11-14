@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* Previous styles remain the same */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* Animation keyframes from before */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 5px rgba(0,0,0,0.2); }
+  50% { box-shadow: 0 0 20px rgba(0,0,0,0.4); }
+  100% { box-shadow: 0 0 5px rgba(0,0,0,0.2); }
+}
+
+/* Enhanced content sections with preserved text */
+.content-section {
+  padding: 8vh 2rem;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.content-section.dark {
+  background-color: #1a1a1a;
+  color: #fff;
+}
+
+.content-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Hero Section */
+.hero-section {
+  position: relative;
+  min-height: 80vh;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+}
+
+.hero-content {
+  max-width: 600px;
+  animation: fadeIn 1s ease-out;
+}
+
+.hero-heading {
+  font-size: 56px;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+/* Anarth Description Section */
+.anarth-description {
+  background-color: #1a1a1a;
+  color: #fff;
+  padding: 8vh 2rem;
+  text-align: center;
+}
+
+.anarth-content {
+  max-width: 800px;
+  margin: 0 auto;
+  animation: fadeIn 1.5s ease-out;
+}
+
+/* Book Preview Section */
+.book-preview {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  padding: 8vh 2rem;
+  background: #fff;
+}
+
+.book-info {
+  transform-style: preserve-3d;
+  transition: transform 0.3s ease;
+}
+
+.book-info:hover {
+  transform: translateY(-10px);
+}
+
+/* About Section */
+.about-section {
+  padding: 8vh 2rem;
+  background: #fff;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+}
+
+.about-content {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeIn 1s ease-out forwards;
+}
+
+/* Glimpse Section */
+.glimpse-section {
+  padding: 8vh 2rem;
+  background: #f5f5f5;
+}
+
+.glimpse-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-top: 2rem;
+}
+
+.glimpse-card {
+  transition: transform 0.3s ease;
+  animation: float 3s ease-in-out infinite;
+}
+
+.glimpse-card:hover {
+  transform: translateY(-10px) rotateY(5deg);
+}
+
+/* Testimonial Section */
+.testimonial-section {
+  padding: 8vh 2rem;
+  background: #f8f9fa;
+}
+
+.testimonial-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  animation: glow 3s infinite;
+}
+
+/* Button Styles */
+.animated-button {
+  display: inline-block;
+  padding: 6px 36px;
+  border-radius: 100px;
+  background: #000;
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.animated-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .book-preview,
+  .about-grid,
+  .glimpse-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero-heading {
+    font-size: 36px;
+  }
+}
+</style>
+
+<body>
+
+<!-- Hero Section -->
+<section class="hero-section">
+  <div class="hero-content">
+    <h1 class="hero-heading">Hit 'Shop Now' to discover my collection.</h1>
+    <div class="button-container">
+      <a href="https://notionpress.com/read/the-worst-thing-ever-happened/paperback" class="animated-button">SHOP NOW</a>
+    </div>
+  </div>
+  <figure class="hero-image">
+    <img src="/api/placeholder/500/700" alt="Book Preview">
+  </figure>
+</section>
+
+<!-- Anarth Description -->
+<section class="anarth-description">
+  <div class="anarth-content">
+    <h2 class="section-heading">Anarth</h2>
+    <div class="description-text">
+      <p>Horror lurks in the shadows of the mind, and this book exposes the terrifying realm of mental disorders, specifically hallucinations. It reveals the nightmarish reality of how our minds fabricate an alternate universe that seems disturbingly real to those trapped within it. Brace yourself for a chilling exploration filled with suspense and dread, as I issue a dire warning: those unprepared to delve into the dark, undefined layers of their own consciousness may find themselves haunted by what they discover!</p>
+    </div>
+  </div>
+</section>
+
+<!-- Book Info Section -->
+<section class="book-preview">
+  <div class="book-info">
+    <h3>THE WORST THING EVER HAPPENED!</h3>
+    <h2>Written with heart and honesty, born from life's toughest moments.</h2>
+    <p>The Worst Thing Ever Happened explores life's toughest challenges, offering personal stories and insights on finding strength and meaning in adversity.</p>
+    <h2>Key Elements :::</h2>
+    <ul>
+      <li>Unpredictability</li>
+      <li>Widespread Suffering</li>
+      <li>Betrayal</li>
+      <li>Existential Crisis</li>
+    </ul>
+  </div>
+  <figure class="book-image">
+    <img src="/api/placeholder/400/600" alt="Book Cover" style="border-radius:10px;">
+  </figure>
+</section>
+
+<!-- About Section -->
+<section class="about-section">
+  <div class="about-grid">
+    <div class="about-content">
+      <h3>ABOUT US</h3>
+      <h2>Author's Hill</h2>
+      <p>Author's Hill is a captivating place where writers gather to share their stories and ideas. It represents a refuge for creativity, filled with inspiration and the thrill of storytelling. The setting is both beautiful and intense, as authors confront their doubts and chase their dreams. Each step on the hill is a journey, reminding them of the struggles and triumphs that come with being a writer.</p>
+      
+      <h2>Jatin Bharat</h2>
+      <p>Jatin Bharat is a certified author known for his literary achievements at a young age. He published his first book, Dristikon, while still in class 12, marking the beginning of his writing journey. With a passion for storytelling, Jatin continued to hone his craft and released his second book, The Worst Thing Ever Happened, in July 2024. Currently, he is immersed in the creation of his third book, Anarth, which delves into the complex world of hallucinations. Beyond prose, Jatin is also a talented poet, having composed numerous Hindi poems that reflect his depth of emotion and creativity. His journey as a writer showcases his dedication and evolving voice in the literary landscape.</p>
+      
+      <div class="button-container">
+        <a href="https://www.youtube.com/@safarkepanne" class="animated-button">Dive More</a>
+      </div>
+    </div>
+    <div class="about-image">
+      <img src="/api/placeholder/400/600" alt="Author Image" style="border-radius:10px;">
+      <h2>Here it is my 1st Book<br><strong>::: Dristikon</strong> -</h2>
+      <figure>
+        <a href="https://www.amazon.in/Dristikon-%E0%A4%A6%E0%A5%83%E0%A4%B7%E0%A5%8D%E0%A4%9F%E0%A4%BF%E0%A4%95%E0%A5%8B%E0%A4%A3-Jatin-Shyam-Gupta/dp/B0B3MR1YX1">
+          <img src="/api/placeholder/400/600" alt="Dristikon Book">
+        </a>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<!-- Glimpse Section -->
+<section class="glimpse-section">
+  <h2 class="section-heading">Glimpse Of Anarth</h2>
+  <div class="glimpse-grid">
+    <div class="glimpse-card">
+      <img src="/api/placeholder/400/600" alt="Glimpse" style="border-radius:20px;">
+      <h3>Glimpse</h3>
+    </div>
+    <div class="glimpse-card">
+      <img src="/api/placeholder/400/600" alt="Story Line" style="border-radius:20px;">
+      <h3>Story Line</h3>
+    </div>
+  </div>
+</section>
+
+<!-- Testimonial Section -->
+<section class="testimonial-section">
+  <div class="testimonial-content">
+    <p class="small-text">WHAT PEOPLE ARE SAYING</p>
+    <h2>With our short two days of interaction I received this book as a gift from the writer himself, @jatin_bharat and trust me you can read this book in one sitting.</h2>
+    <p>All 4 chapters are capturing for real, so captivating Differences in writing is there but you'll relate to each of the writers' story either it's about a story that lights up with the essence of eternal love or another that shows its ugly side, one story about the threat on life of the one writing it while other holds the readers telling a daughter's story who lost everything but hope in remaining strong..... Hope I would say it's the spirit of the book!</p>
+    <p>Thank-you for the opportunity Jatin, I am grateful! Waiting for more to read from your creation.</p>
+    <p class="testimonial-author">- Anshika Upmanyu.</p>
+  </div>
+</section>
+
+<script>
+// Intersection Observer for scroll animations
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+    }
+  });
+}, {
+  threshold: 0.1
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('.content-section, .about-content, .glimpse-card').forEach((el) => observer.observe(el));
+});
+</script>
+
+</body>
+</html>
